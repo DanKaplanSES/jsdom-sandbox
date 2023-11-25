@@ -5,27 +5,26 @@
     "node": true,
     "jasmine": true
   },
+  "plugins": [],
   "extends": [
     "eslint:recommended",
-    "prettier"
+    "prettier",
+    "plugin:prettier/recommended"
   ],
-  "parserOptions": {
-    "sourceType": "module"
-  },
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly",
     "State": "writable",
     "setup": "writable"
   },
-  "plugins": [],
-  "ignorePatterns": [],
+  "parserOptions": {
+    "sourceType": "module"
+  },
   "rules": {
-    "quotes": [
-      "off"
-    ],
-    "no-plusplus": [
-      "off"
-    ]
+    "prettier/prettier": "error",
+    "quotes": ["off"],
+    "no-plusplus": ["off"],
+    "curly": ["error", "all"],
+    "prefer-const": ["warn"]
   }
 }
