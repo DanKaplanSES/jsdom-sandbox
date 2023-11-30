@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "npm run exec && jasmine",
-    "exec": "node index.js"
+    "exec": "node index.js",
+    "server": "npx http-server -p 80"
   },
   "devDependencies": {
     "@types/jasmine": "^5.1.1",
