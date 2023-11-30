@@ -15,11 +15,13 @@
     "eslint": "^8.52.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
+    "http-server": "^14.1.1",
     "jasmine": "^5.1.0"
   },
   "dependencies": {
     "@prettier/sync": "^0.3.0",
-    "jsdom": "^22.1.0",
+    "jquery": "^3.7.1",
+    "jsdom": "^23.0.0",
     "prettier": "^3.0.3"
   }
 }

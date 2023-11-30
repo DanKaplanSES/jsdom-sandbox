@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "firefox",
+            "request": "launch",
+            "reAttach": true,
+            "name": "Launch Firefox",
+            "file": "${workspaceFolder}/template.html",
+            "reloadOnChange": {
+              "watch": ["${workspaceFolder}/template.html", "${workspaceFolder}/*.js"],
+              "ignore": "**/node_modules/**"
+            },
+            "firefoxArgs": ["-private-window"]
+          },
+    ]
+}

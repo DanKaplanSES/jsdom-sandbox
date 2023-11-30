@@ -3,8 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <title>title</title>
+    <script>
+        console.log(`before jQuery script`);
+    </script>
+    <script src="external.js"></script>
+    <script>
+        console.log(`after jQuery script`);
+    </script>
   </head>
   <body>
-    <p>Hello world</p>
+    <script>
+        console.log('Body: Window exists?', window !== undefined);
+    </script>
   </body>
 </html>
