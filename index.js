@@ -8,5 +8,5 @@ import { JSDOM } from 'jsdom';
     pretendToBeVisual: true,
   });
 
-  console.log('Post await: Window exists?', dom.window !== undefined);
+  console.log('Node.JS post await: Window exists?', dom.window !== undefined);
 })();
