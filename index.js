@@ -1,11 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { JSDOM } from 'jsdom';
 
-console.log(`globalThis.module`, globalThis.module);
-console.log(`global.module`, global.module);
-// console.log(`window.module`, window.module);
-console.log(`module`, module);
-
 console.log(`start`);
 
 const dom = await JSDOM.fromFile('template1.html', {
@@ -37,7 +32,7 @@ const dynamicImport = await import('jquery');
 const $ = dynamicImport.default;
 // console.dir($);
 
-console.log(`html`, $('body').html());
+console.log(`html`, $('body').init);
 
 console.log('p textContent jQuery', $('p').textContent); // "Hello world'
 
