@@ -1,16 +1,12 @@
 {
   "env": {
     "browser": true,
-    "es6": true,
+    "es2020": true,
     "node": true,
     "jasmine": true
   },
-  "plugins": [],
-  "extends": [
-    "eslint:recommended",
-    "prettier",
-    "plugin:prettier/recommended"
-  ],
+  "plugins": ["no-floating-promise"],
+  "extends": ["eslint:recommended", "prettier", "plugin:prettier/recommended"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly",
@@ -23,6 +19,7 @@
   },
   "rules": {
     "prettier/prettier": "error",
+    "no-floating-promise/no-floating-promise": "error",
     "quotes": ["off"],
     "no-plusplus": ["off"],
     "curly": ["error", "all"],
