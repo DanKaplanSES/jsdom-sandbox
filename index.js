@@ -1,38 +1,33 @@
 /* eslint-disable no-unused-vars */
 import { JSDOM } from 'jsdom';
 
-console.log(`start`);
+async function logHtml(fileName, logPrefix) {
+  const dom = await JSDOM.fromFile(fileName, {
+    url: 'http://localhost',
+    runScripts: 'dangerously',
+    resources: 'usable',
+    pretendToBeVisual: true,
+  });
+  const window = dom.window;
+  const document = window.document;
 
-const dom = await JSDOM.fromFile('template1.html', {
-  url: 'http://localhost',
-  runScripts: 'dangerously',
-  resources: 'usable',
-  pretendToBeVisual: true,
-});
-const window = dom.window;
-const document = window.document;
+  globalThis.window = window;
+  globalThis.document = document;
 
-console.log('p textContent vanilla', document.querySelector('p').textContent); // "Hello world"
+  const dynamicImport = await import('jquery');
 
-globalThis.window = window;
-globalThis.document = document;
+  const $ = dynamicImport.default;
 
-const previousModule = globalThis.module;
-console.log(previousModule);
-globalThis.module = undefined;
+  console.log(
+    logPrefix + ': document.documentElement.outerHTML:\n',
+    document.documentElement.outerHTML
+  );
+  console.log();
+  console.log(logPrefix + ': $(`html`).html():\n', $(`html`).html());
+}
 
-
-const dynamicImport = await import('jquery');
-// console.log(`1`, dynamicImport);
-// console.log(`2`, dynamicImport.default);
-// console.log(`3`, typeof dynamicImport.default);
-// console.log(`4`, dynamicImport.default());
-// console.dir(dynamicImport.default);
-
-const $ = dynamicImport.default;
-// console.dir($);
-
-console.log(`html`, $('body').init);
-
-console.log('p textContent jQuery', $('p').textContent); // "Hello world'
-
+await logHtml('template1.html', 'first dynamic import');
+console.log();
+console.log('------------------------');
+console.log();
+await logHtml('template2.html', 'second dynamic import');
