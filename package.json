@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "npm run exec && jasmine",
+    "test": "npm run exec && jasmine --config=\"spec/support/jasmine-spec.json\"",
     "exec": "node index.js",
     "lint": "eslint '**/*.(js|ts)' --fix"
   },
