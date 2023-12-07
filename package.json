@@ -2,11 +2,10 @@
   "name": "jsdom-sandbox",
   "version": "0.0.1",
   "description": "A simple sandbox for playing around with jsdom.",
-  "main": "index.js",
+  
   "type": "module",
   "scripts": {
-    "test": "npm run exec && jasmine --config=\"spec/support/jasmine-spec.json\"",
-    "exec": "node index.js",
+    "test": "jasmine --config=\"spec/support/jasmine-spec.json\"",
     "lint": "eslint '**/*.(js|ts)' --fix"
   },
   "devDependencies": {
