@@ -23,6 +23,7 @@
     "quotes": ["off"],
     "no-plusplus": ["off"],
     "curly": ["error", "all"],
-    "prefer-const": ["warn"]
+    "prefer-const": ["warn"],
+    "no-unused-vars": "off"
   }
 }
