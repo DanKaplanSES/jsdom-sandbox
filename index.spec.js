@@ -25,18 +25,18 @@ async function parseHtml(fileName) {
     resources: 'usable',
     pretendToBeVisual: true,
   });
-  const window = dom.window;
-  const document = window.document;
+  //const window = dom.window;
+  //const document = window.document;
 
-  globalThis.window = window;
-  globalThis.document = document;
+  //globalThis.window = window;
+  //globalThis.document = document;
 
   const dynamicImport = await import('jquery');
 
-  const $ = dynamicImport.default;
-
+  //const $ = dynamicImport.default;
+  const $ = dynamicImport.default(dom.window);
   return {
-    document: document,
+    document: dom.window.document,
     jquery: $(`html`),
   };
 }
