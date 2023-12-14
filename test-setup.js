@@ -7,11 +7,6 @@ export async function parseHtmlWithDynamicImport(fileName) {
       resources: 'usable',
       pretendToBeVisual: true,
     });
-    //const window = dom.window;
-    //const document = window.document;
-  
-    //globalThis.window = window;
-    //globalThis.document = document;
   
     const dynamicImport = await import('jquery');
     const $ = dynamicImport.default(dom.window);
