@@ -1,5 +1,5 @@
-import { parseHtml } from './index.js';
-import { parseHtmlWithJQueryStaticImport } from './index2.js';
+import { parseHtmlWithDynamicImport } from './test-setup.js';
+import { parseHtmlWithJQueryStaticImport } from './prod-code.js';
 
 describe('jquery', () => {
   it('affects later static imports', async () => {
@@ -8,7 +8,7 @@ describe('jquery', () => {
     const dynamicImport = await import('jquery');
     const $ = dynamicImport.default(dom.window);
     */
-   await parseHtml('template1.html');
+   await parseHtmlWithDynamicImport('template1.html');
    
     /*
     This will run:
@@ -25,7 +25,7 @@ describe('jquery', () => {
     const dynamicImport = await import('jquery');
     const $ = dynamicImport.default(dom.window);
     */
-    await parseHtml('template2.html');
+    await parseHtmlWithDynamicImport('template2.html');
 
     /*
     This will run:

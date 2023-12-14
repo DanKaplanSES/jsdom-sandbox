@@ -1,6 +1,6 @@
 import { JSDOM} from 'jsdom'
 
-export async function parseHtml(fileName) {
+export async function parseHtmlWithDynamicImport(fileName) {
     const dom = await JSDOM.fromFile(fileName, {
       url: 'http://localhost',
       runScripts: 'dangerously',
