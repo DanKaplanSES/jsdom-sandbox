@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 import * as Diff from 'diff';
 
-const one = 'beep boop ';
+const one = 'beep\tboop ';
 const other = '\nbeep boob blah\t';
 
 const diff = Diff.diffChars(one, other);
