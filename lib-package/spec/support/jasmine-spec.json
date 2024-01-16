@@ -1,0 +1,12 @@
+{
+  "spec_dir": "",
+  "spec_files": [
+    "**/*.spec.js",
+    "!node_modules/**"
+  ],
+  "helpers": [
+    "spec/support/logger.js"
+  ],
+  "stopSpecOnExpectationFailure": false,
+  "random": true
+}
