@@ -6,8 +6,9 @@ This is a boilerplate project that can be used to create simple App/Lib examples
 
 ./npm is a convenience script that runs `npm [args...]` in `lib-package` and `app-package`, respectively.
 
-1. ./npm install
-1. ./npm test
+1. `./npm install`
+1. `./npm test`
+1. `cd app-package; npm run exec`
 
 ## ./setup-env.sh
 
