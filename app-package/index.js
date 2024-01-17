@@ -1,10 +1,6 @@
-import { JSDOM } from 'jsdom';
+import { ConfigurableResourceLoader } from 'jsdom-configurable-resource-loader';
+import { ResourceLoader } from 'jsdom';
+import { myFromFile } from 'lib-package';
 
-JSDOM.fromFile('template.html', {
-  url: 'http://localhost',
-  runScripts: 'dangerously',
-  resources: 'usable',
-  pretendToBeVisual: true,
-}).then((dom) => {
-  console.log(dom.window.document.querySelector('p').textContent); // "Hello world"
-});
+console.log(`Is ConfigurableResourceLoader an instance of ResourceLoader?`, ConfigurableResourceLoader instanceof ResourceLoader);
+myFromFile(new ConfigurableResourceLoader());
