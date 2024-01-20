@@ -3,10 +3,10 @@ set -e
 
 # A shim that forwards npm commands to lib-package and app-package, respectively.
 
-pushd lib-package
+pushd lib-package > /dev/null
     npm "$@"
-popd
+popd > /dev/null
 
-pushd app-package
+pushd app-package > /dev/null
     npm "$@"
-popd
+popd > /dev/null

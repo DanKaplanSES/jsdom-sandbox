@@ -2,17 +2,20 @@
 
 This is a boilerplate project that can be used to create simple App/Lib examples for posting on help forums.
 
-## ./npm [arg...]
+## Setup
 
-./npm is a convenience script that runs `npm [args...]` in `lib-package` and `app-package`, respectively.
+1. `./setup.sh`
 
-1. ./npm install
-1. ./npm test
+## Run
 
-## ./setup-env.sh
+1. `./npma.sh run exec`
 
-For convenience, `setup-env.sh` will add `.` to the front of your PATH variable. That way, you don't need to type the `./` before every `./npm` command, you can just write `npm` like you normally would. `setup-env.sh` needs to modify your *user* PATH. To do that, run it like this:
+## Test
 
-```bash
-source setup-env.sh
-```
+1. `./npm.sh run test`
+
+## Info regarding `npm.sh`, `npma.sh`, and `npml.sh`
+
+* `./npm.sh [arg...]` is a convenience script that runs `./npml.sh [arg...]` then `./npma.sh [arg...]`.
+* `./npml.sh [arg...]` runs `npm [args...]` in `lib-package`.
+* `./npma.sh [arg...]` runs `npm [args...]` in `app-package`.
