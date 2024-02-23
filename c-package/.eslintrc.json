@@ -1,0 +1,29 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "node": true,
+    "jasmine": true
+  },
+  "plugins": ["no-floating-promise"],
+  "extends": ["eslint:recommended", "prettier", "plugin:prettier/recommended"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "State": "writable",
+    "setup": "writable"
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest"
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "no-floating-promise/no-floating-promise": "error",
+    "quotes": ["off"],
+    "no-plusplus": ["off"],
+    "curly": ["error", "all"],
+    "prefer-const": ["warn"],
+    "no-unused-vars": "off"
+  }
+}

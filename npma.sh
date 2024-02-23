@@ -1,6 +1,6 @@
 #! /bin/bash
 set -e
 
-pushd app-package > /dev/null
+pushd a-package > /dev/null
     npm "$@"
 popd > /dev/null

@@ -2,10 +2,14 @@
 set -e
 
 echo "###########################"
-echo "#   lib-package: npm ci   #"
+echo "#   c-package: npm ci   #"
 echo "###########################"
-./npml.sh ci
+./npmc.sh ci
 echo "###########################"
-echo "#   app-package: npm ci   #"
+echo "#   b-package: npm ci   #"
+echo "###########################"
+./npmb.sh ci
+echo "###########################"
+echo "#   a-package: npm ci   #"
 echo "###########################"
 ./npma.sh ci

@@ -1,12 +1,16 @@
 #! /bin/bash
 set -e
 
-# A shim that forwards npm commands to lib-package and app-package, respectively.
+# A shim that forwards npm commands to c-package and b-package and a-package, respectively.
 
-pushd lib-package > /dev/null
+pushd c-package > /dev/null
     npm "$@"
 popd > /dev/null
 
-pushd app-package > /dev/null
+pushd b-package > /dev/null
+    npm "$@"
+popd > /dev/null
+
+pushd a-package > /dev/null
     npm "$@"
 popd > /dev/null
