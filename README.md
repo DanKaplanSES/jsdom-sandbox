@@ -16,6 +16,6 @@ This is a boilerplate project that can be used to create simple App/Lib examples
 
 ## Info regarding `npm.sh`, `npma.sh`, and `npml.sh`
 
-* `./npm.sh [arg...]` is a convenience script that runs `./npml.sh [arg...]` then `./npma.sh [arg...]`.
+* `./npm.sh [arg...]` is a convenience script that runs `./npml.sh [arg...]` then `./npma.sh [arg...]`. Note the order: e.g., `./npm.sh run test` will run tests in lib-package then the app-package.
 * `./npml.sh [arg...]` runs `npm [args...]` in `lib-package`.
 * `./npma.sh [arg...]` runs `npm [args...]` in `app-package`.
