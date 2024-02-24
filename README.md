@@ -6,10 +6,6 @@ This is a boilerplate project that can be used to create simple App/Lib examples
 
 1. `./setup.sh`
 
-## Run
-
-1. `./npma.sh run exec`
-
 ## Test
 
 1. `./npm.sh run test`
