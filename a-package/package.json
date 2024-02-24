@@ -22,6 +22,7 @@
     "jsdom": "^23.2.0",
     "jsdom-configurable-resource-loader": "^0.0.8",
     "---b-package": "file:../b-package",
+    "---c-package": "file:../c-package",
     "prettier": "^3.2.2"
   }
 }

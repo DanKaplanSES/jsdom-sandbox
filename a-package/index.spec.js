@@ -1,6 +1,6 @@
 import { A } from "./index.js";
-import { B } from "../b-package/index.js";
-import { C } from "../c-package/index.js";
+import { B } from "---b-package";
+import { C } from "---c-package";
 
 describe(`Dependency Resolution`, () => {
   it(`can resolve A's dependencies`, () => {

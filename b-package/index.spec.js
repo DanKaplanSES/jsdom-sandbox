@@ -1,5 +1,5 @@
-import { B } from "../b-package/index.js";
-import { C } from "../c-package/index.js";
+import { B } from "./index.js";
+import { C } from "---c-package";
 
 describe(`Dependency Resolution`, () => {
   it(`can resolve B's dependencies`, () => {
