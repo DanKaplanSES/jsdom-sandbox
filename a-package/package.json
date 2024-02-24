@@ -1,6 +1,6 @@
 {
-  "name": "a-package",
-  "version": "0.0.1",
+  "name": "---a-package",
+  "version": "1.0.1",
   "description": "A simple sandbox for playing around with jsdom.",
   "main": "index.js",
   "type": "module",
@@ -21,7 +21,7 @@
     "jasmine": "^5.1.0",
     "jsdom": "^23.2.0",
     "jsdom-configurable-resource-loader": "^0.0.8",
-    "b-package": "file:../b-package",
+    "---b-package": "file:../b-package",
     "prettier": "^3.2.2"
   }
 }

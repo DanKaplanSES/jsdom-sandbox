@@ -1,6 +1,6 @@
 {
-  "name": "c-package",
-  "version": "0.0.1",
+  "name": "---c-package",
+  "version": "3.0.1",
   "description": "A simple sandbox for playing around with jsdom.",
   "main": "index.js",
   "type": "module",
