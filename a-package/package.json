@@ -9,6 +9,9 @@
     "exec": "node index.js",
     "lint": "eslint '**/*.(js|ts)' --fix"
   },
+  "//": [
+    "NOTE: These dependencies do NOT include `file:../b-package`, but all tests pass anyway."
+  ],
   "devDependencies": {
     "@prettier/sync": "^0.3.0",
     "@types/jasmine": "^5.1.4",
@@ -21,7 +24,7 @@
     "jasmine": "^5.1.0",
     "jsdom": "^23.2.0",
     "jsdom-configurable-resource-loader": "^0.0.8",
-    "---b-package": "file:../b-package",
+    
     "prettier": "^3.2.2"
   }
 }
