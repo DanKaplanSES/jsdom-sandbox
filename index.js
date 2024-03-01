@@ -12,6 +12,6 @@ JSDOM.fromFile('template.html', {
     console.log(`Object.getOwnPropertyDescriptor(window, 'HTMLElement')`, Object.getOwnPropertyDescriptor(window, 'HTMLElement'));
     console.log(`Object.getPrototypeOf(window.constructor).name`, Object.getPrototypeOf(window.constructor).name);
 
-    const indirectEval = eval;
-    indirectEval(`console.log(HTMLElement);`);
+    const indirectEval = window.eval;
+    indirectEval(`console.log(window.HTMLElement);`);
 });
