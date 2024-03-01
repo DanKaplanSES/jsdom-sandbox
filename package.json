@@ -22,7 +22,7 @@
   "dependencies": {
     "@prettier/sync": "^0.3.0",
     "jquery": "^3.7.1",
-    "jsdom": "^22.1.0",
+    "jsdom": "^24.0.0",
     "prettier": "^3.0.3"
   }
 }
