@@ -1,10 +1,19 @@
-import { JSDOM } from 'jsdom';
+    console.group(`correct usage in prod`);
+    console.time(`correct prod`);
+    console.log(`correct prod: NOT console.time()`);
+    console.timeLog(`correct prod`);
+    console.log(`correct prod: NOT console.time()`);
+    console.timeLog(`correct prod`);
+    console.log(`correct prod: NOT console.time()`);
+    console.time(`correct prod`);
+    console.groupEnd(`correct usage in prod`);
 
-JSDOM.fromFile('template.html', {
-  url: 'http://localhost',
-  runScripts: 'dangerously',
-  resources: 'usable',
-  pretendToBeVisual: true,
-}).then((dom) => {
-  console.log(dom.window.document.querySelector('p').textContent); // "Hello world"
-});
+    console.group(`incorrect usage in prod`);
+    console.time(`incorrect prod`);
+    console.log(`incorrect prod: NOT console.time()`);
+    console.time(`incorrect prod`);
+    console.log(`incorrect prod: NOT console.time()`);
+    console.time(`incorrect prod`);
+    console.log(`incorrect prod: NOT console.time()`);
+    console.time(`incorrect prod`);
+    console.groupEnd(`incorrect usage in prod`);
