@@ -2,11 +2,12 @@
   "name": "jsdom-sandbox",
   "version": "0.0.1",
   "description": "A simple sandbox for playing around with jsdom.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "test": "npm run exec && jasmine --config=\"spec/support/jasmine-spec.json\"",
-    "exec": "node index.js",
+    "test": "jasmine --config=\"spec/support/jasmine-spec.json\"",
+    "exec": "npm run compile-typescript && node dist/index.js",
+    "compile-typescript": "tsc --build --verbose",
     "lint": "eslint '**/*.(js|ts)' --fix"
   },
   "devDependencies": {
@@ -23,6 +24,9 @@
     "@prettier/sync": "^0.3.0",
     "jquery": "^3.7.1",
     "jsdom": "^24.0.0",
+    "ts-node": "10.9.2",
+    "tslib": "2.6.2",
+    "typescript": "5.3.3",
     "prettier": "^3.0.3"
   }
 }
