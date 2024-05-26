@@ -1,12 +1,17 @@
 {
   "env": {
     "browser": true,
-    "es2020": true,
+    "es6": true,
     "node": true,
     "jasmine": true
   },
-  "plugins": ["no-floating-promise"],
-  "extends": ["eslint:recommended", "prettier", "plugin:prettier/recommended"],
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "prettier",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly",
@@ -14,16 +19,32 @@
     "setup": "writable"
   },
   "parserOptions": {
-    "sourceType": "module",
-    "ecmaVersion": "latest"
+    "ecmaVersion": 2018,
+    "project": [
+      "./tsconfig.json"
+    ]
   },
+  "ignorePatterns": [
+    "dist/**"
+  ],
   "rules": {
     "prettier/prettier": "error",
-    "no-floating-promise/no-floating-promise": "error",
     "quotes": ["off"],
     "no-plusplus": ["off"],
     "curly": ["error", "all"],
+    "prefer-promise-reject-errors": ["error"],
+    "@typescript-eslint/no-misused-promises": [2],
+    "@typescript-eslint/no-floating-promises": [2],
+    "@typescript-eslint/no-empty-function": ["off"],
+    "@typescript-eslint/camelcase": ["off"],
+    "@typescript-eslint/triple-slash-reference": ["off"],
+    "@typescript-eslint/no-unused-vars": ["off"],
+    "@typescript-eslint/no-non-null-assertion": ["off"],
+    "@typescript-eslint/no-non-null-asserted-optional-chain": ["off"],
     "prefer-const": ["warn"],
-    "no-unused-vars": "off"
+    "@typescript-eslint/ban-ts-comment": ["off"],
+    "no-prototype-builtins": ["off"],
+    "prefer-rest-params": ["off"],
+    "@typescript-eslint/no-explicit-any": ["off"]
   }
 }

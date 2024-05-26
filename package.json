@@ -18,15 +18,17 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-no-floating-promise": "^1.0.2",
     "eslint-plugin-prettier": "^5.0.0",
-    "jasmine": "^5.1.0"
+    "@typescript-eslint/eslint-plugin": "6.17.0",
+    "@typescript-eslint/parser": "6.17.0",
+    "jasmine": "^5.1.0",
+    "typescript": "5.3.3",
+    "prettier": "^3.2.5"
   },
   "dependencies": {
     "@prettier/sync": "^0.3.0",
     "jquery": "^3.7.1",
     "jsdom": "^24.0.0",
     "ts-node": "10.9.2",
-    "tslib": "2.6.2",
-    "typescript": "5.3.3",
-    "prettier": "^3.0.3"
+    "tslib": "2.6.2"
   }
 }

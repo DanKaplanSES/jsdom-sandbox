@@ -5,6 +5,10 @@ JSDOM.fromFile('template.html', {
   runScripts: 'dangerously',
   resources: 'usable',
   pretendToBeVisual: true,
-}).then((dom) => {
-  console.log(dom.window.document.querySelector('p').textContent); // "Hello world"
-});
+})
+  .then((dom) => {
+    console.log(dom.window.document.querySelector('p').textContent); // "Hello world"
+  })
+  .catch((e) => {
+    console.log(e);
+  });
