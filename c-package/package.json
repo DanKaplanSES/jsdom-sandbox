@@ -9,6 +9,10 @@
     "exec": "node index.js",
     "lint": "eslint '**/*.(js|ts)' --fix"
   },
+  "dependencies": {
+      "jsdom": "^23",
+      "jquery": "^3"
+  },
   "devDependencies": {
     "@prettier/sync": "^0.3.0",
     "@types/jasmine": "^5.1.4",
