@@ -1,0 +1,5 @@
+{"level":"error","message":"I meant to log this!!!"}
+{"level":"error","message":"I meant to log this!!!"}
+{"level":"error","message":"I meant to log this!!!","requestId":"451"}
+{"level":"error","message":"I meant to log this!!!"}
+{"foo":"bar","level":"error","message":"I meant to log this!!!","requestId":"451"}

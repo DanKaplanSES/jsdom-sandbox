@@ -1,14 +1,14 @@
-import { JSDOM } from 'jsdom';
+import winston from "winston";
 
-JSDOM.fromFile('template.html', {
-  url: 'http://localhost',
-  runScripts: 'dangerously',
-  resources: 'usable',
-  pretendToBeVisual: true,
-})
-  .then((dom) => {
-    console.log(dom.window.document.querySelector('p').textContent); // "Hello world"
-  })
-  .catch((e) => {
-    console.log(e);
+const logger = winston.createLogger({
+    transports: [
+      new winston.transports.Console(),
+      new winston.transports.File({ filename: 'combined.log' })
+    ]
   });
+
+logger.error(`I meant to log this!!!`);
+
+const childLogger = logger.child({ requestId: '451', foo: 'bar' });
+
+childLogger.error(`I meant to log this!!!`);
