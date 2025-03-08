@@ -9,7 +9,7 @@ rm lib-package/package-lock.json || true
 echo "################################"
 echo "#   lib-package: npm install   #"
 echo "################################"
-./npml.sh install
+./npml.sh install --install-links
 
 echo "#########################################"
 echo "#   app-package: rm package-lock.json   #"
@@ -20,5 +20,5 @@ rm app-package/package-lock.json || true
 echo "################################"
 echo "#   app-package: npm install   #"
 echo "################################"
-./npma.sh install
+./npma.sh install --install-links
 
