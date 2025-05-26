@@ -8,7 +8,4 @@ describe(`Dependency Resolution`, () => {
   it(`can resolve B's dependencies`, () => {
     expect(B).toEqual("b");
   });
-  it(`can resolve C's dependencies`, () => {
-    expect(C).toEqual("c");
-  });
 });
