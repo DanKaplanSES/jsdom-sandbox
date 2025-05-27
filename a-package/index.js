@@ -1,9 +1,6 @@
-import { ConfigurableResourceLoader } from 'jsdom-configurable-resource-loader';
 import { createJsDom } from "../b-package/index.js";
+import { ResourceLoader } from 'jsdom'
 
-createJsDom(new ConfigurableResourceLoader({
-    blacklist: [/foo.com/],
-}))
-
+createJsDom(new ResourceLoader())
 
 export const A = "a";
